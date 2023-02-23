@@ -1,7 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
 
+* {
+   box-sizing: border-box;
+ }
+
 body {
    font-family: 'Quicksand', sans-serif;
+   margin: 0;
+   padding: 0;
+}
+
+header{
+   display: inline;
+}
+
+main {
+   padding: 20px;
+   overflow: auto;
 }
 
 .jumbotron {
@@ -12,9 +27,16 @@ body {
    color: white;
 }
 
+#content{
+   float: left;
+   width: 70%;
+}
+
 nav{
    background-color: #00a2c6;
    padding: 5px;
+   position: sticky;
+   top: 0;
 }
 
 nav li {
@@ -68,6 +90,12 @@ h3 {
    width: 200px;
 }
 
+aside{
+   float: right;
+   width: 28%;
+   padding-left: 20px;
+}
+
 footer {
    padding: 20px;
    color: white;
@@ -75,3 +103,17 @@ footer {
    text-align: center;
    font-weight: bold;
 }
+
+@media screen and (max-width: 992px) {
+   #content,
+   aside {
+     width: 100%;
+     padding: 0;
+   /* ..... */
+ }
+}
+  
+ /* Rule yang dituliskan dalam block @media di bawah akan diterapkan pada device yang memiliki ukuran viewport di bawah 600px */
+ @media screen and (max-width: 600px) {
+   /* ..... */
+ }
